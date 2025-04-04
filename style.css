@@ -1,0 +1,21 @@
+.crossword {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Spacing between words */
+}
+
+.word {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 2px solid black;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none; /* Remove default underline for links */
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.word:hover {
+    background-color: black;
+    color: white;
+}
