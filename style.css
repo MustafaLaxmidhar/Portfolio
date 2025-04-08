@@ -1,25 +1,54 @@
-.crossword {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* Adjust spacing between words */
-}
+body {
+    padding: 2rem;
+  }
 
-.word {
-    display: flex;
-    text-decoration: none; /* Remove underline for links */
-}
+  .crossword {
+    display: grid;
+    grid-template-columns: repeat(20, 40px); /* Ensure consistent cell size */
+    grid-template-rows: repeat(20, 40px);    /* Ensure consistent cell size */
+    gap: 0; /* Remove gaps between cells */
+    justify-content: start;
+    align-items: start;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 10;
+  }
 
-.word span {
+  .word {
+    display: flex;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+
+  .word.vertical {
+    flex-direction: column;
+  }
+
+  .word span {
     display: inline-block;
-    padding: 10px;
+    width: 40px; /* Match grid cell size */
+    height: 40px; /* Match grid cell size */
     border: 2px solid black;
     text-align: center;
+    line-height: 38px; /* Slightly less than height for better centering */
+    font-size: 16px; /* Adjust font size for better fit */
     font-weight: bold;
     color: black;
-    transition: background-color 0.3s, color 0.3s;
-}
+    background-color: white;
+    box-sizing: border-box; /* Ensure borders are included in size */
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.2s ease, outline 0.2s ease;
+  }
 
-.word:hover span {
-    background-color: black;
-    color: white;
-}
+  .word:hover span{
+    background-color: #f0f0f0;
+    cursor: pointer;
+    outline: 2px solid #f0f0f0;
+  }
+
+  .word:hover a span {
+    background-color: #f0f0f0;
+    cursor: pointer;
+    outline: 2px solid #f0f0f0;
+  }
