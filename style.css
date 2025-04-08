@@ -2,17 +2,26 @@ body {
     padding: 2rem;
   }
 
-  .crossword {
-    display: grid;
-    grid-template-columns: repeat(20, 40px); /* Ensure consistent cell size */
-    grid-template-rows: repeat(20, 40px);    /* Ensure consistent cell size */
-    gap: 0; /* Remove gaps between cells */
-    justify-content: start;
-    align-items: start;
-    margin-top: 2rem;
-    position: relative;
-    z-index: 10;
-  }
+/* Container for crossword and clues */
+.container {
+  display: flex; /* Use flexbox to align items side by side */
+  justify-content: space-between; /* Space between crossword and clues */
+  align-items: flex-start; /* Align items at the top */
+  gap: 2rem; /* Add space between the crossword and clues */
+}
+
+/* Crossword grid */
+.crossword {
+  display: grid;
+  grid-template-columns: repeat(20, 40px); /* Ensure consistent cell size */
+  grid-template-rows: repeat(20, 40px);    /* Ensure consistent cell size */
+  gap: 0; /* Remove gaps between cells */
+  justify-content: start;
+  align-items: start;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 10;
+}
 
   .word {
     display: flex;
@@ -47,8 +56,38 @@ body {
     outline: 2px solid #f0f0f0;
   }
 
-  .word:hover a span {
-    background-color: #f0f0f0;
-    cursor: pointer;
-    outline: 2px solid #f0f0f0;
-  }
+/* Clues section */
+.clues {
+  max-width: 300px; /* Limit the width of the clues section */
+  margin-left: auto; /* Push the clues section to the right */
+}
+
+.clues h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.clues ul {
+  list-style: none;
+  padding: 0;
+}
+
+.clues li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.clues li strong {
+  font-weight: bold;
+}
+
+.clues-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 1rem; /* Add spacing between rows and columns */
+}
+
+.clues-grid div {
+  font-size: 1rem;
+  line-height: 1.5;
+}
