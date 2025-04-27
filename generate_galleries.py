@@ -2,7 +2,7 @@ import os
 from colorthief import ColorThief
 
 # ====== SETTINGS ======
-BASE_FOLDER = "images"
+BASE_FOLDER = "assets\images\photography"
 COLOR_THRESHOLDS = {
     "red":    (255, 0, 0),
     "green":  (0, 255, 0),
