@@ -2,24 +2,18 @@ import os
 from colorthief import ColorThief
 
 # ====== SETTINGS ======
-# Change this to your images folder path
 BASE_FOLDER = "images"
-
-# Adjust how strict the color grouping is
 COLOR_THRESHOLDS = {
     "red":    (255, 0, 0),
     "green":  (0, 255, 0),
     "blue":   (0, 0, 255),
-    "yellow": (255, 255, 0)
+    "yellow": (255, 255, 0),
+    "black":  (0, 0, 0),
+    "white":  (255, 255, 255),
+    "gray":   (128, 128, 128)
 }
-
-# How close (in RGB value) to consider a match
-COLOR_TOLERANCE = 100  # Smaller = stricter
-
-# Accepted file types
+COLOR_TOLERANCE = 100
 ALLOWED_EXTENSIONS = ('.jpg', '.jpeg', '.png')
-# ======================
-
 
 def closest_color(rgb):
     """Find the closest major color (red, green, blue, yellow)"""
@@ -37,6 +31,11 @@ def closest_color(rgb):
 
 def scan_galleries(base_folder):
     galleries = {}
+    total_files = sum([len(files) for r, d, files in os.walk(base_folder)])
+    processed_files = 0
+    
+    print("Scanning galleries... This might take a moment.")
+
     for place in os.listdir(base_folder):
         place_path = os.path.join(base_folder, place)
         if os.path.isdir(place_path):
@@ -51,10 +50,15 @@ def scan_galleries(base_folder):
                         galleries[place].setdefault(group, []).append(filename)
                     except Exception as e:
                         print(f"Error reading {photo_path}: {e}")
+                    
+                    processed_files += 1
+                    print(f"Processed {processed_files}/{total_files} files...")
+
     return galleries
 
 
 def generate_js(galleries):
+    print("\nGenerating galleries.js content...")
     print("const galleries = {")
     for place, color_groups in galleries.items():
         print(f"  '{place}': {{")
@@ -63,8 +67,10 @@ def generate_js(galleries):
             print(f"    '{color}': [{file_list}],")
         print("  },")
     print("};")
+    print("\nDone generating galleries.js!")
 
 
 if __name__ == "__main__":
     galleries = scan_galleries(BASE_FOLDER)
     generate_js(galleries)
+    print("\nScript finished running.")
