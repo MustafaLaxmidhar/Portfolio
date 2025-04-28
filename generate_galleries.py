@@ -4,15 +4,20 @@ from colorthief import ColorThief
 # ====== SETTINGS ======
 BASE_FOLDER = "assets\images\photography"
 COLOR_THRESHOLDS = {
-    "red":    (255, 0, 0),
-    "green":  (0, 255, 0),
-    "blue":   (0, 0, 255),
-    "yellow": (255, 255, 0),
+    "red":    (220, 20, 60),   # crimson
+    "orange": (255, 165, 0),   # orange
+    "yellow": (255, 215, 0),   # gold
+    "green":  (34, 139, 34),   # forest green
+    "cyan":   (0, 255, 255),   # cyan
+    "blue":   (30, 144, 255),  # dodger blue
+    "purple": (138, 43, 226),  # blue violet
+    "pink":   (255, 105, 180), # hot pink
     "black":  (0, 0, 0),
     "white":  (255, 255, 255),
     "gray":   (128, 128, 128)
 }
-COLOR_TOLERANCE = 100
+
+COLOR_TOLERANCE = 150
 ALLOWED_EXTENSIONS = ('.jpg', '.jpeg', '.png')
 
 def closest_color(rgb):
@@ -45,7 +50,7 @@ def scan_galleries(base_folder):
                     photo_path = os.path.join(place_path, filename)
                     try:
                         color_thief = ColorThief(photo_path)
-                        dominant_color = color_thief.get_color(quality=1)
+                        dominant_color = color_thief.get_color(quality=3)
                         group = closest_color(dominant_color)
                         galleries[place].setdefault(group, []).append(filename)
                     except Exception as e:
