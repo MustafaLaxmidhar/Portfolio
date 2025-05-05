@@ -2,8 +2,11 @@ const projects = [
   {
     id: "breathsonix",
     title: "Breathsonix – Fisher & Paykel Healthcare",
-    thumbnail: "",
-    images: [],
+    thumbnail: "assets/images/Breathsonixmask.jpg",
+    images: [
+      "assets\images\Breathsonixschematic.png",
+      "assets\images\BreathsonixPhase.png"
+    ],
     details: `A detailed description that can include:
 - Project goals and objectives: Develop a method to analyze respiratory sounds and accurately predict respiratory health metrics.
 - Technologies used: Python, scikit-learn, NumPy, simulated lung datasets.
@@ -15,8 +18,10 @@ const projects = [
   {
     id: "firefighter",
     title: "FireFighter Robot",
-    thumbnail: "",
-    images: [],
+    thumbnail: "assets\images\firefighter.jpg",
+    images: [
+      "assets\images\firewiring.jpg"
+    ],
     details: `A detailed description that can include:
 - Project goals and objectives: Build an autonomous robot that can extinguish two candles and avoid static and dynamic obstacles.
 - Technologies used: C++, IR sensors, ultrasonic sensors, LDRs, 3D printing.
@@ -28,8 +33,12 @@ const projects = [
   {
     id: "computer-vision",
     title: "Weld Gap Detection Using Computer Vision",
-    thumbnail: "",
-    images: [],
+    thumbnail: "assets\images\weld.jpg",
+    images: [
+      "assets\images\cvfinal.jpg",
+      "assets\images\cvinterim.jpg",
+      "assets\images\cvinterimB.jpg",
+    ],
     details: `A detailed description that can include:
 - Project goals and objectives: Detect the precise location of a weld gap between two metal sheets using a lightweight computer vision solution.
 - Technologies used: Python, OpenCV, Raspberry Pi.
@@ -41,8 +50,11 @@ const projects = [
   {
     id: "prosthetic-gripper",
     title: "3D Prosthetic Gripper",
-    thumbnail: "",
-    images: [],
+    thumbnail: "assets\images\prostheticgripper.jpg",
+    images: [
+      "assets\images\gripperassembly.png",
+      "assets\images\gripperegg.jpg"
+    ],
     details: `A detailed description that can include:
 - Project goals and objectives: Design a prosthetic gripper capable of picking up varied objects using a single motor.
 - Technologies used: Onshape, 3D printing, mechanical linkages (Whipple tree).
