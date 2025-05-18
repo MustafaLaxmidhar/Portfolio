@@ -56,3 +56,90 @@
     height: 100%;
   }
 }
+
+/*----------------------------------------------------------------------
+Projects Section
+----------------------------------------------------------------------*/
+.projects-section {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Project Cards */
+.project-card {
+    background: white;
+    border-radius: 8px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-image {
+  display: flex;
+  height: 400px; /* Changed from fixed height */
+  overflow: hidden;
+  max-height: 400px; /* Optional: sets maximum height */
+  width: auto;
+}
+
+.project-header {
+    display: flex;
+}
+
+.secondary-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
+    justify-content: end; /* Align the grid to the right */
+    margin-top: 20px;
+}
+
+.secondary-image {
+    display: flex;
+    flex-direction: column;
+    text-align: center; /* Center the text below the images */
+}
+
+.secondary-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensure the full image is visible */
+    border-radius: 4px;
+    margin-bottom: 10px;
+    max-height: 200px; /* Optional: sets maximum height */
+}
+
+.secondary-image p {
+    color: #666;
+    margin: 0;
+}
+
+/* Responsive Design for Projects */
+@media (max-width: 768px) {
+    .project-header {
+        display: block; /* Change from flex to block layout */
+    }
+
+    .main-image {
+        margin-bottom: 20px; /* Add spacing below the image */
+        width: 100%; /* Ensure the image takes full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .project-description {
+        margin-top: 10px; /* Add spacing above the description */
+    }
+
+    .secondary-images {
+        display: block; /* Stack secondary images vertically */
+    }
+
+    .secondary-image {
+        margin-bottom: 20px; /* Add spacing between stacked images */
+    }
+}
