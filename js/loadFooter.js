@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   footerPlaceholder.id = "footer-placeholder";
   document.body.appendChild(footerPlaceholder);
 
-  fetch("footer.html")
+  fetch("components/footer.html")
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("footer-placeholder").innerHTML = data;
