@@ -1,0 +1,32 @@
+.footer {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 20px 40px;
+  border-top: 1px solid #ddd; /* Optional: subtle border at the top */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* Space between icons and copyright */
+  align-items: center; /* Vertically align items */
+}
+
+.cta-links {
+  display: flex;
+  gap: 15px; /* Space between icons */
+}
+
+.cta-links a img {
+  width: 40px; /* Set the width of the icons */
+  height: 40px; /* Set the height of the icons */
+  transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+.cta-links a img:hover {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+.footer-note {
+  font-size: 0.9rem;
+  color: #777;
+  text-align: right;
+}
