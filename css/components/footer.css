@@ -4,7 +4,7 @@
   border-top: 1px solid #ddd; /* Optional: subtle border at the top */
 }
 
-.footer-content {
+.footer {
   display: flex;
   justify-content: space-between; /* Space between icons and copyright */
   align-items: center; /* Vertically align items */
@@ -12,12 +12,12 @@
 
 .cta-links {
   display: flex;
-  gap: 15px; /* Space between icons */
+  gap: 30px; /* Space between icons */
 }
 
 .cta-links a img {
-  width: 40px; /* Set the width of the icons */
-  height: 40px; /* Set the height of the icons */
+  width: 30px; /* Set the width of the icons */
+  height: 30px; /* Set the height of the icons */
   transition: transform 0.3s ease; /* Add a hover effect */
 }
 
