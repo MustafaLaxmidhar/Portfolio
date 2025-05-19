@@ -135,12 +135,6 @@ Projects Section
     margin: 0;
 }
 
-/*----------------------------------------------------------------------
-CTA Section
-----------------------------------------------------------------------*/
-
-
-
 /* Responsive Design for Projects */
 @media (max-width: 768px) {
     .project-header {
