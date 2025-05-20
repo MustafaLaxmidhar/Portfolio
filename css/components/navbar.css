@@ -14,11 +14,16 @@ Home Ribbon
   z-index: 1000; /* Ensure it stays above other elements */
 }
 
+.home-ribbon img {
+  width: 40px; /* Adjust the size of the image */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between image and text */
+}
 .home-ribbon a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 25px;
 }
 
 .home-ribbon a:hover {
