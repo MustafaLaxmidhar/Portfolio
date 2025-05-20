@@ -9,21 +9,43 @@
 <body>
 
     <nav class="custom-nav">
+        <!-- Home Ribbon -->
         <div class="home-ribbon">
-        <img src="assets\images\icons\Basketball.gif" alt="Basketball"/>    
-        <a href="index.html">&Mu;&mu;</a>
+            <img src="assets/images/icons/Basketball.gif" alt="Basketball" />
+            <a href="index.html">&Mu;&mu;</a>
         </div>
+
+        <!-- Hamburger Menu -->
         <div class="nav-trigger">
             <div class="hamburger"></div>
+        </div>
+        <!-- Dropdown Menu -->
+    <div class="nav-dropdown">
+        <div class="dropdown-left">
             <ul class="nav-list">
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="photography.html">Photography</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><span class="dash"></span><a href="about.html">About Me</a></li>
+                <li><span class="dash"></span><a href="projects.html">Projects</a></li>
+                <li><span class="dash"></span><a href="photography.html">Photography</a></li>
+                <li><span class="dash"></span><a href="contact.html">Contact</a></li>
             </ul>
         </div>
+        <div class="dropdown-right">
+            <div class="social-links">
+                <a href="https://github.com/your-profile" target="_blank">
+                    <img src="assets/images/icons/github.png" alt="GitHub" />
+                </a>
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+                    <img src="assets/images/icons/linkedin.png" alt="LinkedIn" />
+                </a>
+                <a href="mailto:your-email@example.com">
+                    <img src="assets/images/icons/email.png" alt="Email" />
+                </a>
+            </div>
+        </div>
+    </div>
     </nav>
 
+    
     <script src="js/loadNavbar.js"></script>
 </body>
 </html>
