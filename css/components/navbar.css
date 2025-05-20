@@ -3,7 +3,7 @@ Home Ribbon
 ----------------------------------------------------------------------*/
 .home-ribbon {
   position: fixed;
-  top: 40px; /* Adjust position */
+  top: 60px; /* Adjust position */
   left: 0; /* Stick to the left side of the screen */
   transform: translateY(-50%); /* Adjust for vertical centering */
   background-color: #007bff; /* Ribbon background color */
@@ -37,7 +37,7 @@ Navigation Bar
   display: flex;
   justify-content: flex-end;
   position: fixed;
-  top: 5px;
+  top: 20px;
   right: 0;
   padding: 1rem;
   z-index: 1000;
@@ -61,6 +61,7 @@ Navigation Bar
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 100;
 }
 
 .hamburger::before {
@@ -78,9 +79,9 @@ Navigation Bar
 .hamburger::after {
   content: '';
   position: absolute;
-  width: 20px;
-  height: 2px;
-  background-color: white;
+  width: 31px;
+  height: 7px;
+  background-color: black;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) translateY(8px); /* Move the minus sign down */
@@ -104,20 +105,19 @@ Dropdown Menu
 ----------------------------------------------------------------------*/
 .nav-dropdown {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  background-color: #ff0000; /* Red background */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: absolute;
-  cursor: pointer;
+  position: fixed; /* CHANGED from absolute */
+  top: 10px; /* Adjust based on nav height */
+  left: 0;
+  width: 100%;
+  height: 40vh;
+  background-color: #ff0000;
   visibility: hidden;
-  top: 50px;
-  right: 0;
-  width: 400px;
-  z-index: 1000;
+  opacity: 0;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+  border-radius: 10px;
+  z-index: 99; /* Make sure it’s above nav */
 }
+
 
 /* Show the dropdown when hovering over the nav-trigger */
 .nav-trigger:hover + .nav-dropdown {
@@ -128,17 +128,20 @@ Dropdown Menu
 /* Left Section: Page Links */
 .dropdown-left {
   flex: 1;
+  display: flex; /* Use flexbox for vertical alignment */
+  align-items: center; /* Center items vertically */
 }
 
 .dropdown-left ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%; /* Ensure the list takes full width */
 }
 
 .dropdown-left li {
   display: flex;
-  align-items: center;
+  align-items: center; /* Center the text and dash vertically */
   margin-bottom: 10px;
 }
 
@@ -150,7 +153,7 @@ Dropdown Menu
   display: inline-block;
   width: 10px;
   height: 2px;
-  background-color: black;
+  background-color: white;
   margin-right: 10px;
 }
 
@@ -164,7 +167,7 @@ Dropdown Menu
 
 .dropdown-left li a:hover {
   text-decoration: line-through;
-  color: #333;
+  color: black;
 }
 
 /* Right Section: Social Links */
