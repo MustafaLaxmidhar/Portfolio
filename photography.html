@@ -15,50 +15,37 @@
     <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
 
-  <header class="hobbies-header">
-    <h1>Photography Portfolio</h1>
-    <p>Attempting to capture memories through glass</p>
-  </header>
+  <div class="grid-card">
+    <div class="subpage-header">
+      <h1>Photography Portfolio</h1>
+      <p>Attempting to capture memories through glass</p>
+    </div>
+  </div>
+
 
   <main class="cards-container">
-    <!-- Cards will be dynamically added here -->
+    <!-- Bali Card -->
+    <div class="card">
+      <img src="assets/images/photography/bali/coconutstairs.jpg" alt="Bali Photography" class="card-image">
+      <div class="card-content">
+        <h3>Bali Photography</h3>
+        <p>Explore breathtaking landscapes and natural wonders.</p>
+        <a href="gallery.html?location=bali" class="btn btn-primary">View Photos</a>
+      </div>
+    </div>
+
+    <!-- Australia Card -->
+    <div class="card">
+      <img src="assets/images/photography/aus/redboat.jpg" alt="Australian Photography" class="card-image">
+      <div class="card-content">
+        <h3>Australian Photography</h3>
+        <p>Discover the beauty of cityscapes and urban life.</p>
+        <a href="gallery.html?location=aus" class="btn btn-primary">View Photos</a>
+      </div>
+    </div>
   </main>
 
-
-  <script src="js/photography.js"></script>
   <script src="js/loadNavbar.js"></script>
   <script src="js/loadFooter.js"></script>
-  <script>
-    const locations = [
-      {
-        id: "bali",
-        title: "Bali Photography",
-        description: "Explore breathtaking landscapes and natural wonders.",
-        image: "assets/images/photography/bali/coconutstairs.jpg",
-      },
-      {
-        id: "aus",
-        title: "Australian Photography",
-        description: "Discover the beauty of cityscapes and urban life.",
-        image: "assets/images/photography/aus/redboat.jpg",
-      },
-    ];
-
-    const cardsContainer = document.querySelector(".cards-container");
-
-    locations.forEach((location) => {
-      const card = document.createElement("div");
-      card.className = "card";
-      card.innerHTML = `
-        <img src="${location.image}" alt="${location.title}" class="card-image">
-        <div class="card-content">
-          <h3>${location.title}</h3>
-          <p>${location.description}</p>
-          <a href="gallery.html?location=${location.id}" class="btn btn-primary">View Photos</a>
-        </div>
-      `;
-      cardsContainer.appendChild(card);
-    });
-  </script>
 </body>
 </html>
