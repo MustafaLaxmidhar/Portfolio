@@ -53,6 +53,7 @@ Navigation Bar
   border-radius: 50%;
 }
 
+/* Default State: White Plus Sign */
 .hamburger {
   width: 30px;
   height: 6px;
@@ -73,7 +74,7 @@ Navigation Bar
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .hamburger::after {
@@ -81,15 +82,15 @@ Navigation Bar
   position: absolute;
   width: 31px;
   height: 7px;
-  background-color: black;
+  background-color: white;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) translateY(8px); /* Move the minus sign down */
+  transform: translate(-50%, -50%);
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* Change plus to minus on hover */
+/* Hover State: White Minus Sign */
 .nav-trigger:hover .hamburger::before {
   transform: translate(-50%, -50%) rotate(90deg) scale(0);
 }
@@ -97,33 +98,50 @@ Navigation Bar
 .nav-trigger:hover .hamburger::after {
   opacity: 1;
   transform: translate(-50%, -50%);
+  background-color: white;
 }
 
+/* Active State (Clicked/Dropdown Open): Black Minus Sign */
+.nav-trigger.active .hamburger::before {
+  transform: translate(-50%, -50%) rotate(90deg) scale(0);
+}
+
+.nav-trigger.active .hamburger::after {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  background-color: black;
+}
+
+/* Ensure hover doesn't override active state */
+.nav-trigger.active:hover .hamburger::after {
+  background-color: black;
+}
 
 /*----------------------------------------------------------------------
 Dropdown Menu
 ----------------------------------------------------------------------*/
 .nav-dropdown {
   display: flex;
-  position: fixed; /* CHANGED from absolute */
-  top: 10px; /* Adjust based on nav height */
+  position: fixed;
+  top: 10px;
   left: 0;
   width: 100%;
   height: 40vh;
   background-color: #ff0000;
-  visibility: hidden;
   opacity: 0;
-  transition: visibility 0.3s ease, opacity 0.3s ease;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 99;
   border-radius: 10px;
-  z-index: 99; /* Make sure it’s above nav */
 }
 
-
-/* Show the dropdown when hovering over the nav-trigger */
-.nav-trigger:hover + .nav-dropdown {
-  visibility: visible;
+.nav-dropdown.active {
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
+
 
 /* Left Section: Page Links */
 .dropdown-left {
