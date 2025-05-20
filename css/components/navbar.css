@@ -1,6 +1,38 @@
+/*----------------------------------------------------------------------
+Home Ribbon
+----------------------------------------------------------------------*/
+.home-ribbon {
+  position: fixed;
+  top: 40px; /* Center vertically */
+  left: 0; /* Stick to the left side of the screen */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  background-color: #007bff; /* Ribbon background color */
+  color: white; /* Text color */
+  padding: 1rem;
+  border-radius: 0 5px 5px 0; /* Rounded corners on the right */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.home-ribbon a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.home-ribbon a:hover {
+  text-decoration: underline;
+}
+
+/*----------------------------------------------------------------------
+Navigation Bar
+----------------------------------------------------------------------*/
 .custom-nav {
+    display: flex;
+    justify-content: flex-end;
     position: fixed;
-    top: 0;
+    top: 5px;
     right: 0;
     padding: 1rem;
     z-index: 1000;
@@ -13,13 +45,12 @@
     cursor: pointer;
     width: 40px;
     height: 40px;
-    background: #333;
     border-radius: 50%;
 }
 
 .hamburger {
-    width: 20px;
-    height: 2px;
+    width: 30px;
+    height: 6px;
     background-color: white;
     position: absolute;
     top: 50%;
@@ -30,8 +61,8 @@
 .hamburger::before {
     content: '';
     position: absolute;
-    width: 2px;
-    height: 20px;
+    width: 6px;
+    height: 30px;
     background-color: white;
     top: 50%;
     left: 50%;
