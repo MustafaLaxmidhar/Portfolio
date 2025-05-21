@@ -15,6 +15,7 @@ Global Container Styles
 .grid-card {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 3;
     gap: 20px;
     background: white;
     border-radius: 8px;
@@ -23,17 +24,49 @@ Global Container Styles
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/*-------------------------------------------------------
+ Generic Subpage Header Styling 
+ --------------------------------------------------------*/
+.subpage-header {
+    text-align: left;
+    align-content: end;
+    padding: 4rem 2rem;
+    background-color: #555555;
+    margin-bottom: 2rem;
+    height: 50vh;
+}
+
+.subpage-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.subpage-header .subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 ;
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .header-subtitle {
+        font-size: 1rem;
+    }
+}
+
 /*----------------------------------------------------------------------
 Projects Section (Updated to use generic classes)
 ----------------------------------------------------------------------*/
 .projects-section {
     /* Inherits styles from section-container */
-    background-color: #f8f9fa;
-}
-
-.project-card {
-    /* Inherits styles from grid-card */
-    /* Add only project-specific styles here */
+    background-color: #3f3f3f;
 }
 
 .main-image {
