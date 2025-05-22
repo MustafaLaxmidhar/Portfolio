@@ -27,13 +27,12 @@ Global Container Styles
 /*-------------------------------------------------------
  Generic Subpage Header Styling 
  --------------------------------------------------------*/
+
 .subpage-header {
-    text-align: left;
     align-content: end;
     padding: 4rem 2rem;
-    background-color: #555555;
+    background-color: #f8f9fa;
     margin-bottom: 2rem;
-    height: 50vh;
 }
 
 .subpage-header h1 {
@@ -142,7 +141,7 @@ Responsive Styles
     .secondary-images {
         display: block; /* Stack secondary images vertically */
     }
-
+    
     .secondary-image {
         margin-bottom: 20px; /* Add spacing between stacked images */
     }

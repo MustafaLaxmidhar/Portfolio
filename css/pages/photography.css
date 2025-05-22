@@ -1,61 +1,77 @@
 .cards-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;  /* Match grid-card gap */
-    padding: 2rem;
-    max-width: 1200px;  /* Match typical grid-card width */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 90%;
     margin: 0 auto;
+    padding: 2rem 0;
 }
 
 .photo-card {
-    position: relative;
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    aspect-ratio: 5/3;  /* Match grid-card's 5 columns by 3 rows ratio */
+    aspect-ratio: 5 / 3; /* This locks the card height */
+    background: #222;
+    border-radius: 8px;
     overflow: hidden;
-    border-radius: 8px;  /* Match grid-card border-radius */
-    padding: 40px;      /* Match grid-card padding */
-    margin-bottom: 30px; /* Match grid-card margin */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Match grid-card shadow */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.photo-card img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.card-image {
+    flex: 0 0 85%;
     height: 100%;
+    width: 85%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    object-position: center;
+    display: block;
 }
 
-/* Adjust overlay to account for padding */
-.card-overlay {
-    position: absolute;
-    bottom: calc(2rem + 40px); /* Adjust for new padding */
-    right: calc(2rem + 40px);  /* Adjust for new padding */
-    color: white;
-    text-align: right;
+.card-content {
+    flex: 0 0 15%;
+    background: #222;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0 1rem;
+    border-left: 4px solid #a22;
+    height: 100%;
 }
 
-.card-overlay h3 {
+.card-content h3 {
     font-size: 2.5rem;
     font-weight: bold;
+    color: white;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Hover Effects */
-.photo-card:hover img {
-    transform: scale(1.05);
-}
+/*---------------------------------------------
+ Responsive Design 
+---------------------------------------------*/
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .photo-card {
-        height: 50vh;
+        flex-direction: column;
+        aspect-ratio: auto; /* Let height grow naturally */
     }
 
-    .card-overlay h3 {
-        font-size: 2rem;
+    .card-image {
+        width: 100%;
+        height: auto;
+        flex: none;
+    }
+
+    .card-content {
+        width: 100%;
+        border-left: none;
+        border-top: 4px solid #a22; /* Switch to horizontal line */
+        flex: none;
+    }
+
+    .card-content h3 {
+        font-size: 1.8rem;
     }
 }
+
