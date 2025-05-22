@@ -30,6 +30,11 @@
     display: block;
 }
 
+.photo-card:hover img{
+    filter: grayscale(1);
+    transition: filter 0.5s ease;
+}
+
 .card-content {
     flex: 0 0 15%;
     background: #222;
