@@ -133,9 +133,18 @@ function renderGallery() {
       galleryContainer.appendChild(anchor);
     });
   });
+  lightbox.option({
+  'resizeDuration': 200,
+  'wrapAround': true
+  });
 }
 
 
 
 // Initialize the gallery on page load
-document.addEventListener("DOMContentLoaded", renderGallery);
+document.addEventListener("DOMContentLoaded", () => {
+  renderGallery();
+  setTimeout(() => {
+    lightbox.init();
+  }, 100); // Delay to ensure images are loaded
+});

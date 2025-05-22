@@ -16,6 +16,14 @@
 
 .gallery-container img:hover {
   filter: grayscale(0.6);
+
+  /* Force Lightbox UI to show */
+.lb-close {
+  z-index: 9999 !important;
+  display: block !important;
+  pointer-events: auto !important;
+}
+
 }
 
 /* Responsive Styles */
