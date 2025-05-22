@@ -142,10 +142,19 @@ Dropdown Menu
   pointer-events: auto;
 }
 
+.dropdown-container {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 25px;
+  width: 90%;
+  height: 80%;
+  padding: 20px;
+}
+
 
 /* Left Section: Page Links */
 .dropdown-left {
-  flex: 1;
   display: flex; /* Use flexbox for vertical alignment */
   align-items: center; /* Center items vertically */
 }
