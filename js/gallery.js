@@ -117,11 +117,11 @@ function renderGallery() {
 
   Object.keys(locationData.photos).forEach((color) => {
     locationData.photos[color].forEach((photo) => {
-      // Create anchor tag for lightbox
+      // Create anchor tag for GLightbox
       const anchor = document.createElement("a");
       anchor.href = photo.src;
-      anchor.setAttribute("data-lightbox", "gallery");
-      anchor.setAttribute("data-title", photo.alt);
+      anchor.setAttribute("class", "glightbox");
+      anchor.setAttribute("data-title", photo.alt); // Caption support
 
       // Create image tag
       const img = document.createElement("img");
@@ -133,9 +133,12 @@ function renderGallery() {
       galleryContainer.appendChild(anchor);
     });
   });
-  lightbox.option({
-  'resizeDuration': 200,
-  'wrapAround': true
+
+  // Initialize GLightbox
+  const lightbox = GLightbox({
+    touchNavigation: true,
+    loop: true,
+    closeEffect: "fade",
   });
 }
 
