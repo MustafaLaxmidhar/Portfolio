@@ -117,13 +117,24 @@ function renderGallery() {
 
   Object.keys(locationData.photos).forEach((color) => {
     locationData.photos[color].forEach((photo) => {
+      // Create anchor tag for lightbox
+      const anchor = document.createElement("a");
+      anchor.href = photo.src;
+      anchor.setAttribute("data-lightbox", "gallery");
+      anchor.setAttribute("data-title", photo.alt);
+
+      // Create image tag
       const img = document.createElement("img");
       img.src = photo.src;
       img.alt = photo.alt;
-      galleryContainer.appendChild(img);
+
+      // Append image to anchor, then anchor to gallery
+      anchor.appendChild(img);
+      galleryContainer.appendChild(anchor);
     });
   });
 }
+
 
 
 // Initialize the gallery on page load
