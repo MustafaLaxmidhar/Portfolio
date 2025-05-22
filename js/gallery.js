@@ -104,7 +104,6 @@ function getQueryParam(param) {
   return urlParams.get(param);
 }
 
-// Render the gallery
 function renderGallery() {
   const locationId = getQueryParam("location");
   const locationData = photoData[locationId];
@@ -114,8 +113,8 @@ function renderGallery() {
     return;
   }
 
-  // Render photos
   const galleryContainer = document.querySelector(".gallery-container");
+
   Object.keys(locationData.photos).forEach((color) => {
     locationData.photos[color].forEach((photo) => {
       const img = document.createElement("img");
@@ -125,6 +124,7 @@ function renderGallery() {
     });
   });
 }
+
 
 // Initialize the gallery on page load
 document.addEventListener("DOMContentLoaded", renderGallery);
