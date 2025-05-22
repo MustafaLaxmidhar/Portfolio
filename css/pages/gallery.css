@@ -1,32 +1,33 @@
 .gallery-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 images per row */
-  gap: 20px;
-  padding: 20px;
+  width: 95%;
+  justify-self: center;
+  column-count: 3;
+  column-gap: 16px;
 }
 
 .gallery-container img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  margin-bottom: 16px;
+  break-inside: avoid;
+  border-radius: 8px; /* optional for polish */
+  transition: filter 0.3s ease;
 }
 
+
 .gallery-container img:hover {
-  transform: scale(1.03);
+  filter: grayscale(0.6);
 }
 
 /* Responsive Styles */
 @media (max-width: 900px) {
   .gallery-container {
-    grid-template-columns: repeat(2, 1fr);
+    column-count: 2;
   }
 }
 
 @media (max-width: 600px) {
   .gallery-container {
-    grid-template-columns: 1fr;
+    column-count: 1;
   }
 }
+
