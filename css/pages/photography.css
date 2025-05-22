@@ -16,6 +16,9 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-decoration: none; /* remove underline */
+     color: inherit;         /* prevent blue/purple link color */
+    display: flex;          /* keep flex layout */
 }
 
 .card-image {
