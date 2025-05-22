@@ -114,10 +114,6 @@ function renderGallery() {
     return;
   }
 
-  // Update title and description
-  document.getElementById("gallery-title").textContent = locationData.title;
-  document.getElementById("gallery-description").textContent = locationData.description;
-
   // Render photos
   const galleryContainer = document.querySelector(".gallery-container");
   Object.keys(locationData.photos).forEach((color) => {
