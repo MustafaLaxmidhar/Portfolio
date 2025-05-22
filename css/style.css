@@ -30,6 +30,7 @@ Global Container Styles
 
 .subpage-header {
     align-content: end;
+    height: 80vh;
     padding: 4rem 2rem;
     background-color: #f8f9fa;
     margin-bottom: 2rem;
