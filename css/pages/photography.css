@@ -1,17 +1,8 @@
-.cards-container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    width: 90%;
-    margin: 0 auto;
-    padding: 2rem 0;
-}
-
 .photo-card {
     display: flex;
     flex-direction: row;
     width: 100%;
-    aspect-ratio: 5 / 3; /* This locks the card height */
+    aspect-ratio: 5 / 2; /* This locks the card height */
     background: #222;
     border-radius: 8px;
     overflow: hidden;
@@ -19,6 +10,7 @@
     text-decoration: none; /* remove underline */
      color: inherit;         /* prevent blue/purple link color */
     display: flex;          /* keep flex layout */
+    margin-bottom: 30px;
 }
 
 .card-image {
