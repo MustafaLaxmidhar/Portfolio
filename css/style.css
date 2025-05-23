@@ -36,10 +36,30 @@ a {
 
 .subpage-header {
     align-content: end;
+    position: relative; /* Needed for absolute positioning of ::before */
     height: 80vh;
     padding: 4rem 2rem;
-    background-color: #f8f9fa;
+    background: none; /* Remove background-image here */
     margin-bottom: 2rem;
+    z-index: 1;
+    /* Remove filter: opacity(0.3); */
+}
+
+.subpage-header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('/assets/images/spiralpattern.png');
+    background-repeat: no-repeat;
+    background-position: left-bottom;
+    opacity: 0.05; /* Adjust this for desired opacity */
+    z-index: 0;
+    pointer-events: none; /* Allows clicks through the pseudo-element */
+}
+
+.subpage-header > * {
+    position: relative;
+    z-index: 1;
 }
 
 .subpage-header h1 {
