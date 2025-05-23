@@ -6,6 +6,12 @@ Global Container Styles
     background-color: #2d2d2d;
 }
 
+a {
+    text-decoration: none;
+    color: inherit; /* Prevent blue/purple link color */
+    font-weight: bold;
+}
+
 .grid-container {
     display: flex;
     flex-wrap: wrap;
