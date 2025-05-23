@@ -1,15 +1,67 @@
 /*----------------------------------------------------------------------
-Global Container Styles
+Global Styles
 ----------------------------------------------------------------------*/
-.section-container {
-    padding: 4rem 2rem;
-    background-color: #2d2d2d;
+html {
+    font-size: 16px; /* Base font size */
+    font-family: 'Inter', 'Segoe UI', Arial, Helvetica, sans-serif;
+    color: #eaeaea;  /* Light text for dark backgrounds */
+    background-color: #2d2d2d; /* Match your section background */
+    line-height: 1.6;
+}
+
+body {
+    font-size: 1rem;
+    font-family: inherit;
+    color: inherit;
+    background: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kepler', 'Inter', 'Segoe UI', Arial, Helvetica, sans-serif;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+/* Paragraphs */
+p {
+    color: #eaeaea;
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-family: Kepler, sans-serif;
+    font-size: 2.5rem;
+}
+
+/* Links */
+a {
+    color: #ff5252;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover, a:focus {
+    color: #fff;
+    text-decoration: underline;
 }
 
 a {
     text-decoration: none;
     color: inherit; /* Prevent blue/purple link color */
     font-weight: bold;
+}
+
+/*----------------------------------------------------------------------
+Global Container Styles
+----------------------------------------------------------------------*/
+.section-container {
+    padding: 4rem 2rem;
+    background-color: #2d2d2d;
 }
 
 .grid-container {
