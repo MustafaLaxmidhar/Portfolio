@@ -35,8 +35,7 @@ p {
 }
 
 h1 {
-    font-family: Kepler, sans-serif;
-    font-size: 2.5rem;
+    font-size: 4.5rem;
 }
 
 /* Links */
@@ -75,7 +74,6 @@ Global Container Styles
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 3;
     gap: 20px;
-    background: white;
     border-radius: 8px;
     padding: 40px;
     margin-bottom: 30px;
@@ -139,29 +137,3 @@ Global Container Styles
     }
 }
 
-/*----------------------------------------------------------------------
-Responsive Styles
-----------------------------------------------------------------------*/
-@media (max-width: 768px) {
-    .project-header {
-        display: block; /* Change from flex to block layout */
-    }
-
-    .main-image {
-        margin-bottom: 20px; /* Add spacing below the image */
-        width: 100%; /* Ensure the image takes full width */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    .project-description {
-        margin-top: 10px; /* Add spacing above the description */
-    }
-
-    .secondary-images {
-        display: block; /* Stack secondary images vertically */
-    }
-    
-    .secondary-image {
-        margin-bottom: 20px; /* Add spacing between stacked images */
-    }
-}

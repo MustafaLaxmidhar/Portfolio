@@ -15,7 +15,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: left;
     padding: 2rem;
 }
@@ -52,7 +51,7 @@ Projects Section (Updated to use generic classes)
     max-height: 600px;
     overflow: hidden;
     object-position: center;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 8px; 
     grid-column: 1 / span 3;
     grid-row: 1;
@@ -100,6 +99,28 @@ Projects Section (Updated to use generic classes)
     margin: 0;
 }
 
+/*-------------------------------------------------------
+    Projects Cards Colouring
+--------------------------------------------------------*/
+
+/* Breathsonix Project Card */
+.breathsonix-card {
+    background: linear-gradient(135deg, #8eaee9 0%, #0e3d7f 100%);
+    color: #222;
+}
+
+/* Firefighter Robot Project Card */
+.firefighter-card {
+    background: linear-gradient(135deg, #fff6b7 0%, #f6416c 100%);
+    color: #222;
+}
+
+/* Weld Gap Detection Project Card */
+.weldgap-card {
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+    color: #222;
+}
+
 /* Keep your existing media queries */
 @media (min-aspect-ratio: 16/9) {
   .background-video {
@@ -113,4 +134,31 @@ Projects Section (Updated to use generic classes)
     width: auto;
     height: 100%;
   }
+}
+
+/*----------------------------------------------------------------------
+Responsive Styles
+----------------------------------------------------------------------*/
+@media (max-width: 768px) {
+    .project-header {
+        display: block; /* Change from flex to block layout */
+    }
+
+    .main-image {
+        margin-bottom: 20px; /* Add spacing below the image */
+        width: 100%; /* Ensure the image takes full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .project-description {
+        margin-top: 10px; /* Add spacing above the description */
+    }
+
+    .secondary-images {
+        display: block; /* Stack secondary images vertically */
+    }
+    
+    .secondary-image {
+        margin-bottom: 20px; /* Add spacing between stacked images */
+    }
 }
