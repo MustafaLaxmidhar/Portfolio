@@ -2,11 +2,11 @@
 Global Styles
 ----------------------------------------------------------------------*/
 html {
-    font-size: 16px; /* Base font size */
+    font-size: 16px; 
     font-family: 'Inter', 'Segoe UI', Arial, Helvetica, sans-serif;
-    color: #eaeaea;  /* Light text for dark backgrounds */
-    background-color: #2d2d2d; /* Match your section background */
+    color: #eaeaea;   
     line-height: 1.6;
+    z-index: -99;
 }
 
 body {
