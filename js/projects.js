@@ -7,6 +7,12 @@ const projects = [
       "assets/images/Breathsonixschematic.png",
       "assets/images/BreathsonixPhase.png"
     ],
+    courseInfo: {
+      course: "MECHENG700",
+      date: "Oct 2024",
+      participants: "Mustafa Laxmidhar, Shaquille Khan",
+      supervisors: "Vladislav Sorokin, Andrew Hall, Nima Hosseini, Andrew Hillard"
+    },
     details: `A detailed description that can include:
 - Project goals and objectives: Develop a method to analyze respiratory sounds and accurately predict respiratory health metrics.
 - Technologies used: Python, scikit-learn, NumPy, simulated lung datasets.
@@ -22,6 +28,12 @@ const projects = [
     images: [
       "assets/images/firewiring.jpg"
     ],
+    courseInfo: {
+      course: "BIOMENG700",
+      date: "Nov 2023",
+      participants: "Mustafa Laxmidhar, Shaquille Khan, Anirudh Rayudu, Shivam Desai",
+      supervisors: "Dr. John Smith"
+    },
     details: `A detailed description that can include:
 - Project goals and objectives: Build an autonomous robot that can extinguish two candles and avoid static and dynamic obstacles.
 - Technologies used: C++, IR sensors, ultrasonic sensors, LDRs, 3D printing.
@@ -39,6 +51,11 @@ const projects = [
       "assets/images/cvinterim.jpg",
       "assets/images/cvinterimB.jpg",
     ],
+    courseInfo: {
+      course: "MECHENG709",
+      date: "Nov 2024",
+      participants: "Mustafa Laxmidhar, Chante DeVilliers, Janusha Gunasekara",
+    },
     details: `A detailed description that can include:
 - Project goals and objectives: Detect the precise location of a weld gap between two metal sheets using a lightweight computer vision solution.
 - Technologies used: Python, OpenCV, Raspberry Pi.
@@ -55,6 +72,11 @@ const projects = [
       "assets/images/gripperassembly.png",
       "assets/images/gripperegg.jpg"
     ],
+    courseInfo: {
+      course: "MECHENG736",
+      date: "Nov 2023",
+      participants: "Mustafa Laxmidhar, Shaquille Khan, Tane Herbert",
+    },
     details: `A detailed description that can include:
 - Project goals and objectives: Design a prosthetic gripper capable of picking up varied objects using a single motor.
 - Technologies used: Onshape, 3D printing, mechanical linkages (Whipple tree).
