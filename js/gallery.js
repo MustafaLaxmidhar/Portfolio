@@ -127,7 +127,8 @@ function renderGallery() {
       const img = document.createElement("img");
       img.src = photo.src;
       img.alt = photo.alt;
-
+      img.classList.add("gallery-animate"); 
+      
       // Append image to anchor, then anchor to gallery
       anchor.appendChild(img);
       galleryContainer.appendChild(anchor);

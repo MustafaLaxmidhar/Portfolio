@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const children = document.querySelectorAll('.grid-card > *');
+  const animatedElements = [
+  ...document.querySelectorAll('.grid-card > *'),
+  ...document.querySelectorAll('.gallery-animate')
+  ]
 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -13,5 +16,5 @@ document.addEventListener("DOMContentLoaded", () => {
     rootMargin: "0px 0px -30% 0px",
   });
 
-  children.forEach(child => observer.observe(child));
+  animatedElements.forEach(el => observer.observe(el));
 });
