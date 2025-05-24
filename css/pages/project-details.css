@@ -5,5 +5,24 @@
     margin: 1rem 0;
 }
 
+.project-flex-row {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
 
+.project-flex-row img {
+    width: 100%;
+    max-width: 450px;
+}
 
+.project-images {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.project-images img {
+    width: 100%;
+    max-width: 600px;
+}

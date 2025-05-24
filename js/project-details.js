@@ -28,8 +28,11 @@ function getProjectDetails() {
     const content = document.getElementById('project-content');
     content.innerHTML = `
       ${courseInfoLine}
+      <div class="project-flex-row">
       <div class="project-description">
         ${project.details}
+      </div>
+      <img src="${project.thumbnail}" alt="${project.title}" class="project-thumbnail">
       </div>
       <a href="projects.html" class="btn btn-secondary">Back to Projects</a>
       <div class="project-images">
