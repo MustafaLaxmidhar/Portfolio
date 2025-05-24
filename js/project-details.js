@@ -20,7 +20,7 @@ function getProjectDetails() {
     if (courseInfo.supervisors) courseParts.push(`Supervisor(s): ${courseInfo.supervisors}`);
 
     const courseInfoLine = courseParts.length
-      ? `<div class="course-info-line" style="margin-bottom:1em; font-style:italic; color:#444;">
+      ? `<div class="course-info-line">
           ${courseParts.join(' | ')}
         </div>`
       : '';
