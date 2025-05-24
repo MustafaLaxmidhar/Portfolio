@@ -29,7 +29,7 @@ const projects = [
       "assets/images/firewiring.jpg"
     ],
     courseInfo: {
-      course: "BIOMENG700",
+      course: "MECHENG706",
       date: "Nov 2023",
       participants: "Mustafa Laxmidhar, Shaquille Khan, Anirudh Rayudu, Shivam Desai"
     },
