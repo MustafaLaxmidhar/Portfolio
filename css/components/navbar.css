@@ -227,6 +227,7 @@ Dropdown Menu
 .social-links a img {
   width: 40px;
   height: 40px;
+  border-radius: 0px;
   transition: filter 0.3s ease;
 }
 

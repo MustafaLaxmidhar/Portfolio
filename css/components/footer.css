@@ -20,6 +20,7 @@
   height: 30px; /* Set the height of the icons */
   filter: invert(1);
   transition: transform 0.3s ease; /* Add a hover effect */
+  border-radius: 0px;
 }
 
 .cta-links a img:hover {
