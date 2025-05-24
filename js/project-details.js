@@ -34,7 +34,7 @@ function getProjectDetails() {
       </div>
       <img src="${project.thumbnail}" alt="${project.title}" class="project-thumbnail">
       </div>
-      <a href="projects.html" class="btn btn-secondary">Back to Projects</a>
+      <a href="index.html" class="btn btn-accent">Back to Projects</a>
       <div class="project-images">
         ${project.images.map(img => `
           <img src="${img}" alt="${project.title}" class="project-image">
