@@ -111,15 +111,16 @@ Projects Section (Updated to use generic classes)
 /*-------------------------------------------------------
     Card Animations
 --------------------------------------------------------*/
-.grid-card {
+
+.grid-card > * {
+  clip-path: inset(0 100% 0 0); /* Fully hidden from the right */
+  transition: clip-path 1s ease-out;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.grid-card.animate {
+.grid-card > *.animate {
+  clip-path: inset(0 0% 0 0); /* Revealed left to right */
   opacity: 1;
-  transform: translateY(0);
 }
 
 
