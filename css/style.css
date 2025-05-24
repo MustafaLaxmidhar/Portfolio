@@ -146,6 +146,15 @@ Global Container Styles
     }
 }
 
+@keyframes unblurContent {
+    0% {
+        filter: blur(5px);
+    }
+    100% {
+        filter: blur(0);
+    }
+}
+
 .subpage-header::before {
     content: "";
     position: absolute;
@@ -168,6 +177,8 @@ Global Container Styles
 .subpage-header > * {
     position: relative;
     z-index: 1;
+    animation: unblurContent 2s ease-out forwards;
+    /* Remove the transition since we're using animation */
 }
 
 .subpage-header h1 {
