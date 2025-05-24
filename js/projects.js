@@ -44,9 +44,8 @@ const projects = [
   {
     id: "computer-vision",
     title: "Weld Gap Detection Using Computer Vision",
-    thumbnail: "assets/images/weld.jpg",
+    thumbnail: "assets/images/cvfinal.jpg",
     images: [
-      "assets/images/cvfinal.jpg",
       "assets/images/cvinterim.jpg",
       "assets/images/cvinterimB.jpg",
     ],
