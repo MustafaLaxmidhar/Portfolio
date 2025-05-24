@@ -127,28 +127,35 @@ function renderGallery() {
       const img = document.createElement("img");
       img.src = photo.src;
       img.alt = photo.alt;
-      img.classList.add("gallery-animate"); 
-      
+      img.classList.add("gallery-animate");
+
       // Append image to anchor, then anchor to gallery
       anchor.appendChild(img);
       galleryContainer.appendChild(anchor);
     });
   });
+}
+
+// Initialize the gallery and animations on page load
+document.addEventListener("DOMContentLoaded", () => {
+  renderGallery();
+
+  // Wait for images to load before initializing animations
+  const images = document.querySelectorAll('.gallery-animate');
+  Promise.all(Array.from(images).map(img => {
+    if (img.complete) return Promise.resolve();
+    return new Promise(resolve => img.addEventListener('load', resolve));
+  })).then(() => {
+    // Now initialize animations after images are loaded
+    if (typeof observeScrollAnimations === "function") {
+      observeScrollAnimations();
+    }
+  });
 
   // Initialize GLightbox
-  const lightbox = GLightbox({
+  GLightbox({
     touchNavigation: true,
     loop: true,
     closeEffect: "fade",
   });
-}
-
-
-
-// Initialize the gallery on page load
-document.addEventListener("DOMContentLoaded", () => {
-  renderGallery();
-  setTimeout(() => {
-    lightbox.init();
-  }, 100); // Delay to ensure images are loaded
 });
