@@ -31,8 +31,7 @@ const projects = [
     courseInfo: {
       course: "BIOMENG700",
       date: "Nov 2023",
-      participants: "Mustafa Laxmidhar, Shaquille Khan, Anirudh Rayudu, Shivam Desai",
-      supervisors: "Dr. John Smith"
+      participants: "Mustafa Laxmidhar, Shaquille Khan, Anirudh Rayudu, Shivam Desai"
     },
     details: `A detailed description that can include:
 - Project goals and objectives: Build an autonomous robot that can extinguish two candles and avoid static and dynamic obstacles.
