@@ -13,13 +13,14 @@ function getProjectDetails() {
     
     const content = document.getElementById('project-content');
     content.innerHTML = `
+      <div class="project-description">
+        ${project.details}
+      </div>
+      <a href="projects.html" class="btn btn-secondary">Back to Projects</a>
       <div class="project-images">
         ${project.images.map(img => `
           <img src="${img}" alt="${project.title}" class="project-image">
         `).join('')}
-      </div>
-      <div class="project-description">
-        ${project.details}
       </div>
     `;
   }
