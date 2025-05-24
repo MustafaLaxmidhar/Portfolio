@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const animatedElements = [
   ...document.querySelectorAll('.grid-card > *'),
-  ...document.querySelectorAll('.gallery-animate')
+  ...document.querySelectorAll('.gallery-animate > img')
   ]
 
   const observer = new IntersectionObserver((entries, observer) => {

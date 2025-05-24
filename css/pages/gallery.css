@@ -26,6 +26,17 @@
 
 }
 
+.gallery-animate {
+  transform: translateY(30px);
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.gallery-animate.animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /* Responsive Styles */
 @media (max-width: 900px) {
   .gallery-container {
