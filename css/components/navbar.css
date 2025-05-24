@@ -184,7 +184,7 @@ Dropdown Menu
   left: 0; /* Anchors the dash to the left of the text */
   top: 50%;
   transform: translateY(-50%);
-  height: 3px;
+  height: 6px;
   width: 10px;
   background-color: white;
   transition: width 0.3s ease, background-color 0.3s ease;
@@ -198,7 +198,7 @@ Dropdown Menu
 .dropdown-left li a {
   text-decoration: none;
   color: black;
-  font-size: 1rem;
+  font-size: 30px;
   font-weight: bold;
   transition: color 0.3s ease;
 }
