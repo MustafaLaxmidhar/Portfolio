@@ -52,7 +52,7 @@ const projects = [
     ],
     courseInfo: {
       course: "MECHENG709",
-      date: "Nov 2024",
+      date: "May 2024",
       participants: "Mustafa Laxmidhar, Chante DeVilliers, Janusha Gunasekara",
     },
     details: `A detailed description that can include:
@@ -73,7 +73,7 @@ const projects = [
     ],
     courseInfo: {
       course: "MECHENG736",
-      date: "Nov 2023",
+      date: "Oct 2024",
       participants: "Mustafa Laxmidhar, Shaquille Khan, Tane Herbert",
     },
     details: `A detailed description that can include:
