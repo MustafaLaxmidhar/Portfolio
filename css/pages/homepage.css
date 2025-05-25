@@ -104,7 +104,7 @@ Projects Section (Updated to use generic classes)
 }
 
 .secondary-image p {
-    color: #666;
+    color: inherit;
     margin: 0;
 }
 
@@ -150,7 +150,7 @@ Projects Section (Updated to use generic classes)
 .prosthetic-gripper-card {
     background: linear-gradient(135deg, #85C1E9 0%, #2874A6 30%, #E67E22 100%);
     /* Light blue -> Dark blue -> Orange */
-    color: #fff; /* Changed to white for better contrast */
+    color: #222; /* Changed to white for better contrast */
 }
 
 /* Keep your existing media queries */
