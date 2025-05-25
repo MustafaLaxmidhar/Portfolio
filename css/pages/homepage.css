@@ -146,6 +146,13 @@ Projects Section (Updated to use generic classes)
     color: #222;
 }
 
+/* Prosthetic Gripper Project Card */
+.prosthetic-gripper-card {
+    background: linear-gradient(135deg, #85C1E9 0%, #2874A6 30%, #E67E22 100%);
+    /* Light blue -> Dark blue -> Orange */
+    color: #fff; /* Changed to white for better contrast */
+}
+
 /* Keep your existing media queries */
 @media (min-aspect-ratio: 16/9) {
   .background-video {
