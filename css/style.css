@@ -40,6 +40,7 @@ h1 {
 
 /* Links */
 a {
+    color: #222;
     text-decoration: none;
     color: inherit; /* Prevent blue/purple link color */
     font-weight: bold;
