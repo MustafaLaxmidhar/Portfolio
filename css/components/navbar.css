@@ -5,7 +5,7 @@ Home Ribbon
   position: fixed;
   top: 60px;
   left: 0;
-  background-color: #007bff;
+  background-color: red;
   color: white;
   padding: 1rem;
   border-radius: 0 5px 5px 0;
@@ -32,15 +32,15 @@ Home Ribbon
 }
 
 .home-ribbon img {
-  width: 40px; /* Adjust the size of the image */
-  height: auto; /* Maintain aspect ratio */
+  width: auto; /* Adjust the size of the image */
+  height: 50px; /* Maintain aspect ratio */
   margin-right: 10px; /* Space between image and text */
 }
-.home-ribbon a {
+.home-ribbon span {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 
 /*----------------------------------------------------------------------
