@@ -7,7 +7,7 @@
 .footer {
   display: flex;
   justify-content: space-between; /* Space between icons and copyright */
-  align-items: stretch; /* Vertically align items */
+  align-items: center;
 }
 
 .cta-links {
