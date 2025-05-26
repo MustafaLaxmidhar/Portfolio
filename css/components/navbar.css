@@ -3,15 +3,32 @@ Home Ribbon
 ----------------------------------------------------------------------*/
 .home-ribbon {
   position: fixed;
-  top: 60px; /* Adjust position */
-  left: 0; /* Stick to the left side of the screen */
-  transform: translateY(-50%); /* Adjust for vertical centering */
-  background-color: #007bff; /* Ribbon background color */
-  color: white; /* Text color */
+  top: 60px;
+  left: 0;
+  background-color: #007bff;
+  color: white;
   padding: 1rem;
-  border-radius: 0 5px 5px 0; /* Rounded corners on the right */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
-  z-index: 1000; /* Ensure it stays above other elements */
+  border-radius: 0 5px 5px 0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+/* Shift ribbon right on hover */
+.home-ribbon:hover {
+  transform: translateX(10px);
+}
+
+/* Pseudo-element to fill the left gap */
+.home-ribbon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px; /* Extend to the left of the ribbon */
+  height: 100%;
+  width: 11px;
+  background-color: inherit;
+  z-index: 999; /* Behind the ribbon */
 }
 
 .home-ribbon img {
@@ -24,10 +41,6 @@ Home Ribbon
   color: white;
   font-weight: bold;
   font-size: 25px;
-}
-
-.home-ribbon a:hover {
-  text-decoration: underline;
 }
 
 /*----------------------------------------------------------------------
@@ -45,7 +58,7 @@ Navigation Bar
   display: inline-block;
   cursor: pointer;
   position: fixed;
-  top: 30px;
+  top: 60px;
   left: 90%;
   right: 0;
   width: 40px;
@@ -125,8 +138,8 @@ Dropdown Menu
   display: flex;
   position: fixed;
   align-self: center;
-  left: 47%;
-  top: 20px;
+  left: 45%;
+  top: 50px;
   width: 50%;
   height: 40vh;
   background-color:white;
