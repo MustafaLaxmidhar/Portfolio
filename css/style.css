@@ -192,5 +192,9 @@ Global Container Styles
     .header-subtitle {
         font-size: 1rem;
     }
+
+    .grid-card {
+        display: block
+    }
 }
 
