@@ -67,11 +67,10 @@ img {
 }
 
 /* CSS */
-.btn-accent {
+.btn-accent{
   background: red;
   border: 0;
   border-radius: 12px;
-  color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -94,6 +93,8 @@ img {
 }
 
 .btn-accent:hover {
+    background-color: #222;
+    color: #fff;
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
