@@ -3,6 +3,7 @@ Home Ribbon
 ----------------------------------------------------------------------*/
 .home-ribbon {
   position: fixed;
+  display: flex;
   top: 60px;
   left: 0;
   background-color: red;
@@ -11,6 +12,8 @@ Home Ribbon
   border-radius: 0 5px 5px 0;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  align-content: center;
+  align-items: center;
   z-index: 1000;
 }
 
@@ -37,10 +40,10 @@ Home Ribbon
   margin-right: 10px; /* Space between image and text */
 }
 .home-ribbon span {
-  text-decoration: none;
+  font-family: 'Garamond';
   color: white;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 /*----------------------------------------------------------------------
@@ -61,8 +64,8 @@ Navigation Bar
   top: 60px;
   left: 90%;
   right: 0;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   padding: 1rem;
   z-index: 999;
@@ -70,8 +73,8 @@ Navigation Bar
 
 /* Default State: White Plus Sign */
 .hamburger {
-  width: 30px;
-  height: 8px;
+  width: 40px;
+  height: 9px;
   background-color: rgb(255, 0, 0);
   position: absolute;
   top: 50%;
@@ -83,8 +86,8 @@ Navigation Bar
 .hamburger::before {
   content: '';
   position: absolute;
-  width: 8px;
-  height: 30px;
+  width: 9px;
+  height: 40px;
   background-color: rgb(255, 0, 0);
   top: 50%;
   left: 50%;
@@ -95,8 +98,8 @@ Navigation Bar
 .hamburger::after {
   content: '';
   position: absolute;
-  width: 31px;
-  height: 9px;
+  width: 41px;
+  height: 10px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -138,7 +141,7 @@ Dropdown Menu
   display: flex;
   position: fixed;
   align-self: center;
-  left: 45%;
+  left: 48%;
   top: 50px;
   width: 50%;
   height: 40vh;
