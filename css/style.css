@@ -185,8 +185,29 @@ Global Container Styles
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
+    html {
+        font-size: 14px; /* Slightly smaller base font size for mobile */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Reduced from 4.5rem */
+    }
+
+    .subpage-header h1 {
+        font-size: 2.5rem; /* Reduced from 4.5rem */
+    }
+
     .page-header h1 {
         font-size: 2rem;
+    }
+
+    .subtitle,
+    .subpage-header .subtitle {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
     }
 
     .header-subtitle {
@@ -194,7 +215,27 @@ Global Container Styles
     }
 
     .grid-card {
-        display: block
+        display: block;
+        padding: 20px; /* Reduced padding for mobile */
+    }
+}
+
+/* Additional breakpoint for even smaller screens */
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subpage-header h1 {
+        font-size: 2rem;
+    }
+
+    .subpage-header {
+        padding: 2rem 1rem; /* Reduced padding for mobile */
     }
 }
 
