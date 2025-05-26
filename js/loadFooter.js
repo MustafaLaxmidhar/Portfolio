@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   footerPlaceholder.id = "footer-placeholder";
   document.body.appendChild(footerPlaceholder);
 
-  fetch("/components/footer.html")
+  fetch("/Portfolio/components/footer.html")
     .then((response) => {
       if (!response.ok) throw new Error("Failed to load footer");
       return response.text();
