@@ -58,7 +58,7 @@ img {
 
 /* CSS */
 .btn-accent{
-  background: red;
+  color: red;
   border: 0;
   border-radius: 12px;
   cursor: pointer;
