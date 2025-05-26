@@ -40,8 +40,8 @@ h1 {
 
 /* Links */
 a {
-    color: #222;
-    text-decoration: none;
+    color: #222 !important;
+    text-decoration: none !important;
     font-weight: bold;
 }
 
