@@ -5,7 +5,7 @@ Home Ribbon
   position: fixed;
   display: flex;
   top: 2vh; /* Responsive vertical placement */
-  left: 2vw; /* Responsive horizontal placement */
+  left: 0;
   background-color: red;
   color: white;
   padding: 1rem;
@@ -126,9 +126,9 @@ Dropdown Menu
   display: flex;
   position: fixed;
   left: 50%;
-  top: 12vh; /* Position it consistently below nav-trigger */
+  top: 1vh; /* Position it consistently below nav-trigger */
   transform: translateX(-50%) translateY(-500px);
-  width: 90vw;
+  width: 50vw;
   height: 40vh;
   background-color: white;
   opacity: 0;
