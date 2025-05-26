@@ -4,41 +4,39 @@ Home Ribbon
 .home-ribbon {
   position: fixed;
   display: flex;
-  top: 60px;
-  left: 0;
+  top: 2vh; /* Responsive vertical placement */
+  left: 2vw; /* Responsive horizontal placement */
   background-color: red;
   color: white;
   padding: 1rem;
   border-radius: 0 5px 5px 0;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
-  align-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-/* Shift ribbon right on hover */
 .home-ribbon:hover {
   transform: translateX(10px);
 }
 
-/* Pseudo-element to fill the left gap */
 .home-ribbon::before {
   content: '';
   position: absolute;
   top: 0;
-  left: -10px; /* Extend to the left of the ribbon */
+  left: -10px;
   height: 100%;
   width: 11px;
   background-color: inherit;
-  z-index: 999; /* Behind the ribbon */
+  z-index: 999;
 }
 
 .home-ribbon img {
-  width: auto; /* Adjust the size of the image */
-  height: 50px; /* Maintain aspect ratio */
-  margin-right: 10px; /* Space between image and text */
+  width: auto;
+  height: 50px;
+  margin-right: 10px;
 }
+
 .home-ribbon span {
   font-family: 'Garamond';
   color: white;
@@ -55,23 +53,18 @@ Navigation Bar
   z-index: 1000;
 }
 
-/* Hamburger Menu */
 .nav-trigger {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
   position: fixed;
-  top: 60px;
-  left: 90%;
-  right: 0;
+  top: 2vh; /* Match .home-ribbon vertical position */
+  right: 2vw; /* Use right instead of left: 90% for responsiveness */
   width: 50px;
   height: 50px;
   border-radius: 50%;
   padding: 1rem;
   z-index: 999;
+  cursor: pointer;
 }
 
-/* Default State: White Plus Sign */
 .hamburger {
   width: 40px;
   height: 9px;
@@ -107,29 +100,21 @@ Navigation Bar
   transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* Hover State: White Minus Sign */
-.nav-trigger:hover .hamburger::before {
-  transform: translate(-50%, -50%) rotate(90deg) scale(0);
-}
-
-.nav-trigger:hover .hamburger::after {
-  opacity: 1;
-  transform: translate(-50%, -50%);
-  background-color: rgb(255, 0, 0);
-}
-
-/* Active State (Clicked/Dropdown Open): Black Minus Sign */
+.nav-trigger:hover .hamburger::before,
 .nav-trigger.active .hamburger::before {
   transform: translate(-50%, -50%) rotate(90deg) scale(0);
 }
 
+.nav-trigger:hover .hamburger::after,
 .nav-trigger.active .hamburger::after {
   opacity: 1;
   transform: translate(-50%, -50%);
+}
+
+.nav-trigger.active .hamburger::after {
   background-color: black;
 }
 
-/* Ensure hover doesn't override active state */
 .nav-trigger.active:hover .hamburger::after {
   background-color: black;
 }
@@ -140,23 +125,22 @@ Dropdown Menu
 .nav-dropdown {
   display: flex;
   position: fixed;
-  align-self: center;
-  left: 48%;
-  top: 50px;
-  width: 50%;
+  left: 50%;
+  top: 12vh; /* Position it consistently below nav-trigger */
+  transform: translateX(-50%) translateY(-500px);
+  width: 90vw;
   height: 40vh;
-  background-color:white;
+  background-color: white;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translateY(-500px);
   transition: opacity 0.3s ease, transform 0.5s ease;
   z-index: 50;
   border-radius: 10px;
 }
 
 .nav-dropdown.active {
-  transform: translateY(0);
+  transform: translateX(-50%) translateY(0);
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -174,32 +158,30 @@ Dropdown Menu
   border-radius: 0 0 10px 10px;
 }
 
-
-/* Left Section: Page Links */
 .dropdown-left {
-  display: flex; /* Use flexbox for vertical alignment */
-  align-items: center; /* Center items vertically */
+  display: flex;
+  align-items: center;
 }
 
 .dropdown-left ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 100%; /* Ensure the list takes full width */
+  width: 100%;
 }
 
 .dropdown-left li {
-  position: relative; /* Necessary for absolute positioning inside */
+  position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  padding-left: 20px; /* Create space for the dash */
+  padding-left: 20px;
 }
 
 .dropdown-left li::before {
   content: '';
   position: absolute;
-  left: 0; /* Anchors the dash to the left of the text */
+  left: 0;
   top: 50%;
   transform: translateY(-50%);
   height: 6px;
@@ -225,14 +207,12 @@ Dropdown Menu
   color: white;
 }
 
-
-/* Right Section: Social Links */
 .dropdown-right {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-left: 2px solid black; /* Vertical line separator */
+  border-left: 2px solid black;
   padding-left: 20px;
 }
 
@@ -250,5 +230,5 @@ Dropdown Menu
 }
 
 .social-links a img:hover {
-  filter: invert(1); /* Invert colors on hover */
+  filter: invert(1);
 }
