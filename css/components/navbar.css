@@ -212,7 +212,7 @@ Dropdown Menu
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-left: 2px solid black;
+  border-left: 2px solid rgb(185, 0, 0);
   padding-left: 20px;
 }
 
@@ -299,7 +299,7 @@ Dropdown Menu
 /* Additional breakpoint for even smaller screens */
 @media (max-width: 768px) {
     .home-ribbon span {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .dropdown-left li a {
@@ -307,13 +307,13 @@ Dropdown Menu
     }
 
     .dropdown-right {
-      border-top: 2px solid black;
+      border-left: 2px solid rgb(185, 0, 0);
       padding-top: 20px;
     }
 
   .social-links {
     display: flex;  
-    flex-direction: row;
+    flex-direction: column;
     gap: 15px;
   }
 
