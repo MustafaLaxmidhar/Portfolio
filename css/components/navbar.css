@@ -297,7 +297,7 @@ Dropdown Menu
 }
 
 /* Additional breakpoint for even smaller screens */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .home-ribbon span {
         font-size: 1.5rem;
     }
@@ -306,9 +306,17 @@ Dropdown Menu
         font-size: 20px;
     }
 
+  .social-links {
+    display: flex;  
+    flex-direction: row;
+    gap: 15px;
+  }
+
     .social-links a img {
         width: 24px;
         height: 24px;
     }
+
+
 }
 
