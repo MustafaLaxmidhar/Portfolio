@@ -31,3 +31,23 @@
   font-size: 0.9rem;
   color: #777;
 }
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .cta-links {
+        gap: 20px; /* Reduced gap between icons on mobile */
+    }
+
+    .cta-links a img {
+        width: 24px; /* Smaller icon width on mobile */
+        height: 24px; /* Smaller icon height on mobile */
+    }
+
+    .footer {
+        padding: 15px 20px; /* Reduced padding on mobile */
+    }
+
+    .footer-note {
+        font-size: 0.8rem; /* Slightly smaller text on mobile */
+    }
+}
