@@ -56,8 +56,7 @@ const photoData = {
     photos: {
       gray: [
         { src: "assets/images/photography/bali/airport.jpg", alt: "Airport" },
-        { src: "assets/images/photography/bali/beachtrucks2.jpg", alt: "Beach Trucks 2" },
-        { src: "assets/images/photography/bali/beachtrucks1.jpg", alt: "Beach Trucks 1" },
+        { src: "assets/images/photography/bali/beachtrucks2.jpg", alt: "Beach Trucks" },
         { src: "assets/images/photography/bali/bhudda.jpg", alt: "Buddha" },
         { src: "assets/images/photography/bali/catpaw.jpg", alt: "Cat Paw" },
         { src: "assets/images/photography/bali/chinatemple.jpg", alt: "Chinese Temple" },
@@ -67,7 +66,7 @@ const photoData = {
         { src: "assets/images/photography/bali/dontswim.jpg", alt: "Don't Swim" },
         { src: "assets/images/photography/bali/dragonfly.jpg", alt: "Dragonfly" },
         { src: "assets/images/photography/bali/dragonroof.jpg", alt: "Dragon Roof" },
-        { src: "assets/images/photography/bali/DSC_1222.jpg", alt: "Temple Scene" },
+        { src: "assets/images/photography/bali/DSC_1222.jpg", alt: "Birds Roosting" },
         { src: "assets/images/photography/bali/hanumanfly.jpg", alt: "Hanuman Fly" },
         { src: "assets/images/photography/bali/koistatue.jpg", alt: "Koi Statue" },
         { src: "assets/images/photography/bali/lazycat.jpg", alt: "Lazy Cat" },
@@ -75,13 +74,11 @@ const photoData = {
         { src: "assets/images/photography/bali/monkeygate.jpg", alt: "Monkey Gate" },
         { src: "assets/images/photography/bali/oceantree.jpg", alt: "Ocean Tree" },
         { src: "assets/images/photography/bali/ram.jpg", alt: "Ram" },
-        { src: "assets/images/photography/bali/ricefield.jpg", alt: "Rice Field" },
-        { src: "assets/images/photography/bali/shadowcat.jpg", alt: "Shadow Cat" }
+        { src: "assets/images/photography/bali/ricefield.jpg", alt: "Rice Field" }
       ],
       black: [
         { src: "assets/images/photography/bali/batcave.jpg", alt: "Bat Cave" },
         { src: "assets/images/photography/bali/bhudda (2).jpg", alt: "Buddha 2" },
-        { src: "assets/images/photography/bali/bhudda3.jpg", alt: "Buddha 3" },
         { src: "assets/images/photography/bali/biketruck.jpg", alt: "Bike Truck" },
         { src: "assets/images/photography/bali/bridgebus.jpg", alt: "Bridge Bus" },
         { src: "assets/images/photography/bali/brokentemple.jpg", alt: "Broken Temple" },
@@ -97,10 +94,8 @@ const photoData = {
         { src: "assets/images/photography/bali/junglepot.jpg", alt: "Jungle Pot" },
         { src: "assets/images/photography/bali/junglestairs.jpg", alt: "Jungle Stairs" },
         { src: "assets/images/photography/bali/monkeygarden.jpg", alt: "Monkey Garden" },
-        { src: "assets/images/photography/bali/monkeygarden2.jpg", alt: "Monkey Garden 2" },
         { src: "assets/images/photography/bali/monkeyshade.jpg", alt: "Monkey Shade" },
         { src: "assets/images/photography/bali/monkeytemple.jpg", alt: "Monkey Temple" },
-        { src: "assets/images/photography/bali/monkeytree.jpg", alt: "Monkey Tree" },
         { src: "assets/images/photography/bali/oceanswing.jpg", alt: "Ocean Swing" },
         { src: "assets/images/photography/bali/rockskull.jpg", alt: "Rock Skull" },
         { src: "assets/images/photography/bali/shopalley.jpg", alt: "Shop Alley" },
@@ -122,9 +117,8 @@ const photoData = {
       ],
       white: [
         { src: "assets/images/photography/bali/offering.JPG", alt: "Offering" },
-        { src: "assets/images/photography/bali/templepath.jpg", alt: "Temple Path" },
-        { src: "assets/images/photography/bali/threeboats.jpg", alt: "Three Boats" }
-      ]
+        { src: "assets/images/photography/bali/templepath.jpg", alt: "Temple Path" }
+      ],
     }
   }
 };
